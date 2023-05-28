@@ -33,6 +33,7 @@ public class AuthController {
     public String login(AuthUserDto authUserDto, HttpSession httpSession) {
         User user = this.userService.login(authUserDto);
         if (user != null) {
+            httpSession.setAttribute("userId", user.getUuid());
             httpSession.setAttribute("username", user.getFirstName());
             return "redirect:/";
         } else {

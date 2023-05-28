@@ -8,4 +8,6 @@ public interface UserService {
     User login(AuthUserDto authUserDto);
 
     boolean register(RegisterUserDto registerUserDto);
+
+    User getUserId(String UUID);
 }

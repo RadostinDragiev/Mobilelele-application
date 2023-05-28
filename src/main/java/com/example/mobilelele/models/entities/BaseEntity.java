@@ -1,5 +1,6 @@
 package com.example.mobilelele.models.entities;
 
+import lombok.Getter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.GeneratedValue;
@@ -7,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
+@Getter
 public abstract class BaseEntity {
     @Id
     @GeneratedValue(generator = "uuid-string")

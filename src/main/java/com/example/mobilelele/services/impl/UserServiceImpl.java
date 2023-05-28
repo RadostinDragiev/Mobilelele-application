@@ -57,4 +57,9 @@ public class UserServiceImpl implements UserService {
             return false;
         }
     }
+
+    @Override
+    public User getUserId(String UUID) {
+        return this.userRepository.findById(UUID).orElseThrow(IllegalArgumentException::new);
+    }
 }
