@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 @Slf4j
@@ -39,5 +40,10 @@ public class OfferServiceImpl implements OfferService {
             this.validationUtil.getViolations(offer).forEach(v -> log.error(v.getMessage()));
              return false;
         }
+    }
+
+    @Override
+    public List<Offer> getAllAOffers() {
+        return this.offerRepository.findAll();
     }
 }
