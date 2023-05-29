@@ -36,6 +36,9 @@ public class OfferController {
 
     @GetMapping("/add")
     public String addOffer(HttpSession httpSession, Model offer) {
+        if (!httpSession.getAttributeNames().hasMoreElements()) {
+            return "redirect:/users/login";
+        }
         offer.addAttribute("transmissions", Transmission.values());
         offer.addAttribute("engines", Engine.values());
         offer.addAttribute("brands", this.brandService.getAllBrandsAndModels());
