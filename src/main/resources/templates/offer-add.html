@@ -18,7 +18,7 @@
 
 <div class="container">
     <h2 class="text-center text-white">Upload Offer</h2>
-    <form action="/offers/add" method="POST" class="main-form mx-auto col-md-8 d-flex flex-column justify-content-center">
+    <form th:action="@{/offers/add}" method="POST" class="main-form mx-auto col-md-8 d-flex flex-column justify-content-center">
         <div class="row">
             <div class="form-group col-md-6 mb-3">
                 <label class="text-white font-weight-bold" for="category">Vehicle Category</label>
