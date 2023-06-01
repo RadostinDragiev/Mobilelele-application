@@ -1,21 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
-<head>
-    <meta charset="UTF-8">
-    <title>MobiLeLeLe</title>
-    <link rel="stylesheet" href="/css/reset-css.css"/>
-    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
-    <link rel="stylesheet" href="/font/fontawesome/css/solid.css"/>
-    <link rel="stylesheet" href="/font/fontawesome/css/fontawesome.min.css"/>
-    <script src="/js/jquery-3.5.1.slim.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-</head>
+<head th:replace="fragments/head :: head('Register')"/>
 
 <body>
-
-<th:block th:include="~{/header.html}"></th:block>
+<div th:replace="fragments/header :: header"></div>
 
     <div class="container">
         <h2 class="text-center text-white">Register User</h2>
